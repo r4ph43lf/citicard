@@ -10,6 +10,76 @@ html{
     
 }
 
+.botaoProximaRodada{
+    
+    background-color:#e9ebee;
+    
+    color:rgb(29,32,102);
+    
+    border:1.5px solid rgb(29,32,102);
+    
+    transition: 0.4s;
+    
+    transition-timing-function:ease-in-out; 
+    
+    -webkit-transition: 0.4s;
+    
+    -webkit-transition-timing-function:ease-in-out; 
+    
+}
+
+.botaoProximaRodada:hover{
+    
+    color:white;
+    
+    background-color:rgb(29,32,102);
+    
+    transition: 0.4s;
+    
+    transition-timing-function:ease-in-out; 
+    
+    -webkit-transition: 0.4s;
+    
+    -webkit-transition-timing-function:ease-in-out; 
+    
+}
+
+.botaoFinalizar{
+    
+    background-color:#e9ebee;
+    
+    color:rgb(29,32,102);
+    
+    border:1.5px solid rgb(29,32,102);
+    
+    transition: 0.4s;
+    
+    transition-timing-function:ease-in-out; 
+    
+    -webkit-transition: 0.4s;
+    
+    -webkit-transition-timing-function:ease-in-out; 
+    
+}
+
+.botaoFinalizar:hover{
+    
+    border:1.5px solid red;
+    
+    color:white;
+    
+    background-color:red;
+    
+    transition: 0.4s;
+    
+    transition-timing-function:ease-in-out; 
+    
+    -webkit-transition: 0.4s;
+    
+    -webkit-transition-timing-function:ease-in-out; 
+    
+}
+
 .opcaoCard {
     
     color:rgb(29,32,102);

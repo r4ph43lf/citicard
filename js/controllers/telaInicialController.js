@@ -109,9 +109,9 @@ function($scope) {
         
         $scope.inicio =                     "Home";   
         
-        $scope.logo =                       "CitiCard - The Game";   
+        $scope.logo =                       "Super Cities - The Game";   
         
-        $scope.ranking =                    "Ranking";
+        $scope.ranking =                    "About";
         
         $scope.cartas =                     "Cards";
         
@@ -127,7 +127,7 @@ function($scope) {
         
         $scope.desenvolvedor =              "In colaboration with IBGE";
         
-        $scope.bemVindo =                   "Welcome to CitiCard!";
+        $scope.bemVindo =                   "Welcome to Super Cities!";
         
         $scope.anos =                       "Anos";
         
@@ -304,7 +304,7 @@ function($scope) {
         
         $scope.inicio =                     "Início";   
         
-        $scope.logo =                       "CitiCard - O Jogo";   
+        $scope.logo =                       "Super Cidades - O Jogo";   
         
         $scope.ranking =                    "Sobre";
         
@@ -322,7 +322,7 @@ function($scope) {
         
         $scope.desenvolvedor =              "Em colaboração com o IBGE";
         
-        $scope.bemVindo =                   "Bem Vindo ao CitiCard!";
+        $scope.bemVindo =                   "Bem Vindo a Super Cidades!";
         
         $scope.anos =                       "Anos";
         

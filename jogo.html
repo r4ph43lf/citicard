@@ -29,7 +29,7 @@
     
             <a href="" ng-click="calcularResultadoPartida(cartaHumano.Dados.IDH,cartaComputador.Dados.IDH,'IDH')" class="opcaoCard itemLinhaInferior" style="width:35%;text-align: left;">
                 
-                <p class="fontCard">IDH</p>
+                <p class="fontCard" title="Índice de Desenvolvimento Humano Municipal (2010)">IDH</p>
                 <div class="linhaInferior"></div>
             </a>
             
@@ -41,61 +41,61 @@
             
             <a href="" class="opcaoCard" ng-click="calcularResultadoPartida(cartaHumano.Dados.PopulacaoEstimada,cartaComputador.Dados.PopulacaoEstimada,'População')" style="width:35%;margin-top:8%;text-align: left;">
                 
-                <p class="fontCard">População</p>
+                <p class="fontCard" title="População estimada (2016)">População</p>
                 
             </a>
             
             <div style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: right;">
                 
-                <p class="fontCard">{{cartaHumano.Dados.PopulacaoEstimada}}</p>
+                <p id="populacao" name="populacao" class="fontCard">{{cartaHumano.Dados.PopulacaoEstimada}} hab</p>
                 
             </div>
             
             <a href="" ng-click="calcularResultadoPartida(cartaHumano.Dados.Urbanizacao,cartaComputador.Dados.Urbanizacao,'Urbanização')" class="opcaoCard" style="width:35%; margin-top:8%;text-align: left;">
                 
-                <p class="fontCard">Urbanização</p>
+                <p class="fontCard" title="Taxa de escolarização de 6 a 14 anos de idade (2010)">Escolarização</p>
                 
             </a>
             
             <div style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: right;">
                 
-                <p class="fontCard">{{cartaHumano.Dados.Urbanizacao}}</p>
+                <p class="fontCard">{{cartaHumano.Dados.Urbanizacao}}%</p>
                 
             </div>
             
-            <a href="" ng-click="calcularResultadoPartida(cartaHumano.Dados.SalarioMedio,cartaComputador.Dados.SalarioMedio,'Salário Médio')" class="opcaoCard" style="width:35%; margin-top:8%;text-align: left;">
+            <a href="" ng-click="calcularResultadoPartida(cartaHumano.Dados.SalarioMedio,cartaComputador.Dados.SalarioMedio,'Salário Médio')" class="opcaoCard" style="width:60%; margin-top:8%;text-align: left;">
                 
-                <p class="fontCard">Salário Médio</p>
+                <p class="fontCard" title="Salário médio mensal dos trabalhadores formais (2014)">Salário</p>
                 
             </a>
             
             <div  style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: right;">
                 
-                <p class="fontCard">{{cartaHumano.Dados.SalarioMedio}}</p>
+                <p class="fontCard">{{cartaHumano.Dados.SalarioMedio}} <span title="em Salários Mínimos">(S.M)</span></p>
                 
             </div>
             
             <a href="" ng-click="calcularResultadoPartida(cartaHumano.Dados.Arborizacao,cartaComputador.Dados.Arborizacao,'Arborização')" class="opcaoCard" style="width:35%; margin-top:8%;text-align: left;">
                 
-                <p class="fontCard">Arborizacao</p>
+                <p class="fontCard" title="Arborização de vias públicas (2010)">Arborização</p>
                 
             </a>
             
             <div  style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: right;">
                 
-                <p class="fontCard">{{cartaHumano.Dados.Arborizacao}}</p>
+                <p class="fontCard">{{cartaHumano.Dados.Arborizacao}}%</p>
                 
             </div>
             
             <a href="" ng-click="calcularResultadoPartida(cartaHumano.Dados.Esgotamento,cartaComputador.Dados.Esgotamento,'Saneamento')" class="opcaoCard" style="width:35%; margin-top:8%;text-align: left;">
                 
-                <p class="fontCard">Saneamento</p>
+                <p class="fontCard" title="Esgotamento sanitário adequado (2010)">Saneamento</p>
                 
             </a>
             
             <div  style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: right;">
                 
-                <p class="fontCard">{{cartaHumano.Dados.Esgotamento}}</p>
+                <p class="fontCard" title="Esgotamento sanitário adequado (2010)">{{cartaHumano.Dados.Esgotamento}}%</p>
                 
             </div>
             
@@ -109,9 +109,9 @@
     
         <center><img class="imagemCurso" src="resources/arrows.png"></center>
         
-        <center><a ng-click="proximaRodada()" style="margin-top:2%;background-color:rgb(29,32,102);width:300px" ng-hide="esconderCarta" class="btn waves-effect waves-light" >Próxima Rodada <i class="fa fa-arrow-right" aria-hidden="true"></i></a></center>
+        <center><a ng-click="proximaRodada()" style="margin-top:2%;width:300px" ng-hide="esconderCarta" class="btn waves-effect waves-light botaoProximaRodada" >Próxima Rodada <i class="fa fa-arrow-right" aria-hidden="true"></i></a></center>
         
-        <center><a ng-click="finalizarPartida()" style="margin-top:2%;background-color:red; width:300px" ng-hide="esconderCarta" class="btn waves-effect waves-light" ><i class="fa fa-arrow-left" aria-hidden="true"></i> Finalizar Partida</a></center>
+        <center><a ng-click="finalizarPartida()" style="margin-top:2%; width:300px" ng-hide="esconderCarta" class="btn waves-effect waves-light botaoFinalizar" ><i class="fa fa-arrow-left" aria-hidden="true"></i> Finalizar Partida</a></center>
         
     </div>
 
@@ -166,23 +166,23 @@
             
             <div style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: right;">
                 
-                <p class="fontCard">{{cartaComputador.Dados.PopulacaoEstimada}}</p>
+                <p class="fontCard">{{cartaComputador.Dados.PopulacaoEstimada}} hab</p>
                 
             </div>
             
             <div href="" style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: left;">
                 
-                <p class="fontCard">Urbanização</p>
+                <p class="fontCard">Escolarização</p>
                 
             </div>
             
             <div style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: right;">
                 
-                <p class="fontCard">{{cartaComputador.Dados.Urbanizacao}}</p>
+                <p class="fontCard">{{cartaComputador.Dados.Urbanizacao}}%</p>
                 
             </div>
             
-            <div href="" style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: left;">
+            <div href="" style="width:60%; margin-top:8%;color:rgb(29,32,102);text-align: left;">
                 
                 <p class="fontCard">Salário Médio</p>
                 
@@ -190,19 +190,19 @@
             
             <div style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: right;">
                 
-                <p class="fontCard">{{cartaComputador.Dados.SalarioMedio}}</p>
+                <p class="fontCard">{{cartaComputador.Dados.SalarioMedio}} (S.M)</p>
                 
             </div>
             
             <div href="" style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: left;">
                 
-                <p class="fontCard">Arborizacao</p>
+                <p class="fontCard">Arborização</p>
                 
             </div>
             
             <div style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: right;">
                 
-                <p class="fontCard">{{cartaComputador.Dados.Arborizacao}}</p>
+                <p class="fontCard">{{cartaComputador.Dados.Arborizacao}}%</p>
                 
             </div>
             
@@ -214,7 +214,7 @@
             
             <div style="width:35%; margin-top:8%;color:rgb(29,32,102);text-align: right;">
                 
-                <p class="fontCard">{{cartaComputador.Dados.Esgotamento}}</p>
+                <p class="fontCard">{{cartaComputador.Dados.Esgotamento}}%</p>
                 
             </div>
             
@@ -241,12 +241,16 @@
 
 <div id="modalInputNome" class="modal" style="border-radius:20px;background-color:#e9ebee">
     <div class="modal-content">
-        <h4 class="opcaoCard"><i class="fa fa-angle-right" aria-hidden="true"></i> Dados do Jogador</h4>
+        <h4 class="opcaoCard"><i class="fa fa-angle-right" aria-hidden="true"></i> Dados do Jogo</h4>
         <div class="divider opcaoCard"></div>
         <div class="input-field">
             <label for="nome">Nome:</label>
             <input ng-model="human.name" type="text" id="nome" style="margin-top:2%"/>
         </div>
+        <p class="range-field">
+          <label for="test5">Selecione a quantidade de rodadas: (Padrão: 10)</label>
+          <input type="range" id="test5" min="0" max="20" ng-model="qtdPartidas"/>
+        </p>
     </div>
     <div class="modal-footer">
         

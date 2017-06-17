@@ -10,8 +10,5 @@ app.config(function($routeProvider) {
   })
   .when("/sobre", {
     templateUrl : "sobre.html"
-  })
-  .when("/cartas", {
-    templateUrl : "cartas.html"
   });
 });

@@ -27,9 +27,11 @@
         $scope.esconderCarta = true;
         $scope.placarHuman = 0;
         $scope.placarComputer = 0;
+        $scope.qtdPartidas = 10;
         
         recuperarCarta(1);
         recuperarCarta(2);
+        
         
         $scope.carregarModal = function () {
             
@@ -37,7 +39,8 @@
             $('.modal').modal({dismissible: false});
             
             $('#modalInputNome').modal('open');
-        });
+            });
+    
         }
         
         function recuperarCarta(numero) {
@@ -96,6 +99,12 @@
             }else{
                 
                 $scope.mensagemGame = "Houve um Empate!";
+                
+            }
+            
+            if($scope.qtdPartidas == $scope.placarHuman || $scope.qtdPartidas == $scope.placarComputer){
+                
+                $scope.finalizarPartida;
                 
             }
             
