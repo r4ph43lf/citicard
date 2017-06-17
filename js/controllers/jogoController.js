@@ -27,7 +27,7 @@
         $scope.esconderCarta = true;
         $scope.placarHuman = 0;
         $scope.placarComputer = 0;
-        $scope.qtdPartidas = 10;
+        $scope.qtdPartidas = 5;
         
         recuperarCarta(1);
         recuperarCarta(2);
@@ -104,7 +104,7 @@
             
             if($scope.qtdPartidas == $scope.placarHuman || $scope.qtdPartidas == $scope.placarComputer){
                 
-                $scope.finalizarPartida;
+                finalizarGame();
                 
             }
             
@@ -144,6 +144,27 @@
             $('#modalEndGame').modal('open');
             
         }
+        
+        function finalizarGame() {
+            
+            if($scope.placarComputer > $scope.placarHuman){
+                
+                $scope.winnerGame = "COMPUTADOR venceu o jogo com " + $scope.placarComputer + " pontos!";
+                
+            }else if($scope.placarComputer < $scope.placarHuman){
+                
+                $scope.winnerGame = $scope.human.name.toUpperCase() + " venceu o jogo com " + $scope.placarHuman + " pontos!";
+                
+            }else{
+                
+                $scope.winnerGame =" Houve um Empate!";
+                
+            }
+            
+            $('#modalEndGame').modal('open');
+            
+        }
+        
         
         function calcularResultado(cardHuman, cardPc) {
             

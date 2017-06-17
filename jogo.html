@@ -1,6 +1,6 @@
 <!-- ESSA É A PAGINA QUE VAI HOSPEDAR O JOGO --> 
-<div ng-controller="gameController" ng-init="carregarModal()">
-<div style="display:flex;justify-content:space-around;width:100%;flex-wrap:wrap;">
+<div class="quadro" ng-controller="gameController" ng-init="carregarModal()">
+<div class="" style="display:flex;justify-content:space-around;width:100%;flex-wrap:wrap;">
     
     <div id="cartaJogador" class="card wow slideInUp  cartaoCurso hoverable" style="opacity:{{opacidadeCarta}}">
         
@@ -103,11 +103,11 @@
     
     </div>
     
-    <div style="margin-top:10%;margin-bottom:10%">
+    <div style="margin-top:16%;margin-bottom:10%">
     
         <center><h5 style="color:rgb(29,32,102)" ng-hide="esconderCarta">Opção: {{opcao}}</h5></center>
     
-        <center><img class="imagemCurso" src="resources/arrows.png"></center>
+        <center><img class="imagemCurso" src="resources/arrows.png" style="height:150px"></center>
         
         <center><a ng-click="proximaRodada()" style="margin-top:2%;width:300px" ng-hide="esconderCarta" class="btn waves-effect waves-light botaoProximaRodada" >Próxima Rodada <i class="fa fa-arrow-right" aria-hidden="true"></i></a></center>
         
@@ -117,7 +117,7 @@
 
     <div class="card wow slideInUp  cartaoCurso hoverable" ng-hide="!esconderCarta">
     
-        <img src="resources/backcard.jpg">
+        <img src="resources/carta-ibge.png">
     
     </div>
 
@@ -239,7 +239,7 @@
     </div>
 </div>
 
-<div id="modalInputNome" class="modal" style="border-radius:20px;background-color:#e9ebee">
+<div id="modalInputNome" class="modal" style="border-radius:20px;background-color:#e9ebee;height:320px">
     <div class="modal-content">
         <h4 class="opcaoCard"><i class="fa fa-angle-right" aria-hidden="true"></i> Dados do Jogo</h4>
         <div class="divider opcaoCard"></div>
@@ -247,9 +247,10 @@
             <label for="nome">Nome:</label>
             <input ng-model="human.name" type="text" id="nome" style="margin-top:2%"/>
         </div>
+        <label style="font-size:15px" for="">Quantidade de pontos: (Padrão: 5)</label>
         <p class="range-field">
-          <label for="test5">Selecione a quantidade de rodadas: (Padrão: 10)</label>
-          <input type="range" id="test5" min="0" max="20" ng-model="qtdPartidas"/>
+          
+          <input type="range" id="test5" min="1" max="10" ng-model="qtdPartidas"/>
         </p>
     </div>
     <div class="modal-footer">

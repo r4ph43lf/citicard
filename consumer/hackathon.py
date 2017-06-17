@@ -30,11 +30,10 @@ def getInformacoesCidade(cidade):
     dados = {
         'idh' : '30255',
         'pop_estimada' : '29171',
-        #'urbanizacao' : '60031',
+        'urbanizacao' : '60031',
         'salario_medio' : '29765',
         'esgotamento' : '60030',
         'arborizacao' : '60029',
-        'escolarizacao' : '60045'
 
 #        'populacao' : '29166',
 #        'pessoal_ocupado' : '29763',
@@ -65,19 +64,16 @@ def getInformacoesCidade(cidade):
     for item in parsed_json:
         if item['indicador'] == u'Salário médio mensal':
             indicador = 'salario_medio'
-        elif item['indicador'] == u'População estimada':
+        if item['indicador'] == u'População estimada':
             indicador = 'pop_estimada'
-        elif item['indicador'] == u'Arborização de vias públicas':
+        if item['indicador'] == u'Arborização de vias públicas':
             indicador = 'arborizacao'
-        elif item['indicador'] == u'IDH':
-            indicador = 'idh'
-        elif item['indicador'] == u'Esgotamento sanitário adequado':
-            indicador = 'esgotamento'
-        elif item['indicador'] == u'Esgotamento sanitário adequado':
-            indicador = 'esgotamento'
-        elif item['indicador'] == u'6 a 14 anos de idade':
-            # alteracoes de ultima hora. precisa corrigir
+        if item['indicador'] == u'Urbanização de vias públicas':
             indicador = 'urbanizacao'
+        if item['indicador'] == u'IDH':
+            indicador = 'idh'
+        if item['indicador'] == u'Esgotamento sanitário adequado':
+            indicador = 'esgotamento'
 
         aux = item['res'][0]['res']
         maior = max(aux.keys())

@@ -43,5 +43,5 @@ Produção de um jogo por meio de um aplicativo web responsivo. Roda no servidor
 ## [EQUIPE]
 * [Bernardo Alves Furtado (Produção e Redação)](https://www.researchgate.net/profile/Bernardo_Furtado)
 * [Breno Prata (Desenvolvedor Front-End e Designer)](http://brenoprata.pe.hu/Curriculo/#!/) 
-* [Luis Flavio Rocha (Desenvolvedor)](https://www.linkedin.com/in/luisflaviorocha/)
+* Luis Flavio Rocha (Desenvolvedor)
 * [Raphael Fernandes (Desenvolvedor Fullstack Javascript)](https://www.linkedin.com/in/raphaellof/)
