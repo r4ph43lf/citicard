@@ -1,0 +1,22 @@
+(function () {
+    "use strict";
+
+    var ibgeData = [[{"cidade": "Bras\u00edlia", "uf": "DF", "dados": {"esgotamento": "87.9", "pop_estimada": "2977216", "idh": "0.824", "salario_medio": "5.5", "urbanizacao": "57", "arborizacao": "36.9"}}, {"cidade": "Bel\u00e9m", "uf": "PA", "dados": {"esgotamento": "67.9", "pop_estimada": "1446042", "idh": "0.746", "salario_medio": "3.6", "urbanizacao": "36.1", "arborizacao": "22.3"}}, {"cidade": "Florian\u00f3polis", "uf": "SC", "dados": {"esgotamento": "87.8", "pop_estimada": "477798", "idh": "0.847", "salario_medio": "4.8", "urbanizacao": "54.4", "arborizacao": "32"}}, {"cidade": "S\u00e3o Lu\u00eds", "uf": "MA", "dados": {"esgotamento": "65.4", "pop_estimada": "1082935", "idh": "0.768", "salario_medio": "3.2", "urbanizacao": "11.7", "arborizacao": "32.3"}}, {"cidade": "Palmas", "uf": "TO", "dados": {"esgotamento": "67.6", "pop_estimada": "279856", "idh": "0.788", "salario_medio": "4.1", "urbanizacao": "31.3", "arborizacao": "79.9"}}, {"cidade": "Macei\u00f3", "uf": "AL", "dados": {"esgotamento": "47.1", "pop_estimada": "1021709", "idh": "0.721", "salario_medio": "2.8", "urbanizacao": "32.7", "arborizacao": "57.1"}}, {"cidade": "Fortaleza", "uf": "CE", "dados": {"esgotamento": "74", "pop_estimada": "2609716", "idh": "0.754", "salario_medio": "2.8", "urbanizacao": "13.2", "arborizacao": "74.8"}}, {"cidade": "Recife", "uf": "PE", "dados": {"esgotamento": "69.2", "pop_estimada": "1625583", "idh": "0.772", "salario_medio": "3.3", "urbanizacao": "49.6", "arborizacao": "60.5"}}, {"cidade": "Natal", "uf": "RN", "dados": {"esgotamento": "61.8", "pop_estimada": "877662", "idh": "0.763", "salario_medio": "3.1", "urbanizacao": "16.5", "arborizacao": "44.7"}}, {"cidade": "Jo\u00e3o Pessoa", "uf": "PB", "dados": {"esgotamento": "70.8", "pop_estimada": "801718", "idh": "0.763", "salario_medio": "2.7", "urbanizacao": "25.1", "arborizacao": "78.4"}}], [{"cidade": "Rio de Janeiro", "uf": "RJ", "dados": {"esgotamento": "94.4", "pop_estimada": "6498837", "idh": "0.799", "salario_medio": "4.4", "urbanizacao": "78.4", "arborizacao": "70.5"}}, {"cidade": "Porto Alegre", "uf": "RS", "dados": {"esgotamento": "93", "pop_estimada": "1481019", "idh": "0.805", "salario_medio": "4.2", "urbanizacao": "69.4", "arborizacao": "82.7"}}, {"cidade": "Salvador", "uf": "BA", "dados": {"esgotamento": "92.8", "pop_estimada": "2938092", "idh": "0.759", "salario_medio": "3.5", "urbanizacao": "35", "arborizacao": "39.5"}}, {"cidade": "Teresina", "uf": "PI", "dados": {"esgotamento": "61.6", "pop_estimada": "847430", "idh": "0.751", "salario_medio": "2.7", "urbanizacao": "5.8", "arborizacao": "72.3"}}, {"cidade": "Aracaju", "uf": "SE", "dados": {"esgotamento": "87.2", "pop_estimada": "641523", "idh": "0.770", "salario_medio": "3.3", "urbanizacao": "55.4", "arborizacao": "56.6"}}, {"cidade": "Macap\u00e1", "uf": "AP", "dados": {"esgotamento": "26.8", "pop_estimada": "465495", "idh": "0.733", "salario_medio": "4.0", "urbanizacao": "8.8", "arborizacao": "66"}}, {"cidade": "Boa Vista", "uf": "RR", "dados": {"esgotamento": "54.1", "pop_estimada": "326419", "idh": "0.752", "salario_medio": "3.4", "urbanizacao": "4.3", "arborizacao": "47.5"}}, {"cidade": "Campo Grande", "uf": "MS", "dados": {"esgotamento": "58.7", "pop_estimada": "863982", "idh": "0.784", "salario_medio": "3.4", "urbanizacao": "33.4", "arborizacao": "96.3"}}, {"cidade": "Cuiab\u00e1", "uf": "MT", "dados": {"esgotamento": "80.2", "pop_estimada": "585367", "idh": "0.785", "salario_medio": "3.7", "urbanizacao": "34.3", "arborizacao": "39.6"}}, {"cidade": "S\u00e3o Paulo", "uf": "SP", "dados": {"esgotamento": "92.6", "pop_estimada": "12038175", "idh": "0.805", "salario_medio": "4.4", "urbanizacao": "50.3", "arborizacao": "74.8"}}]]
+    
+    app.factory('apiFactory', apiFactory);
+    
+    apiFactory.$inject = ['$http'];
+    
+    function apiFactory ($http) {
+        var url = 'http://177.15.79.68:8000/getCidades'; // nao sera usado na apresentacao pq a api é lenta para responder
+        
+        return {
+            getCards: function () {
+                return ibgeData; // usado na apresentacao
+                // return $http.get(url); // usado em producao
+            }
+
+        }; 
+    };
+
+})();
